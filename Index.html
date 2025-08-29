@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
-        
+
         * {
             font-family: 'Inter', sans-serif;
         }
-        
+
         .code-font {
             font-family: 'JetBrains Mono', monospace;
         }
-        
+
         /* Advanced 3D Background */
         .hero-3d {
             background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-3d::before {
             content: '';
             position: absolute;
@@ -31,18 +32,27 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
             animation: gradientShift 8s ease-in-out infinite;
         }
-        
+
         @keyframes gradientShift {
-            0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
-            50% { opacity: 0.8; transform: scale(1.1) rotate(2deg); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1) rotate(2deg);
+            }
         }
-        
+
         /* 3D Logo Animation */
         .logo-3d {
             transform-style: preserve-3d;
@@ -50,24 +60,42 @@
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3);
             background-size: 600% 600%;
             animation: rotate3d 12s infinite linear, gradientFlow 3s ease-in-out infinite;
-            box-shadow: 
+            box-shadow:
                 0 0 30px rgba(255, 107, 107, 0.5),
                 0 0 60px rgba(78, 205, 196, 0.3),
                 0 0 90px rgba(69, 183, 209, 0.2);
         }
-        
+
         @keyframes rotate3d {
-            0% { transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg); }
-            33% { transform: rotateY(120deg) rotateX(20deg) rotateZ(10deg); }
-            66% { transform: rotateY(240deg) rotateX(-20deg) rotateZ(-10deg); }
-            100% { transform: rotateY(360deg) rotateX(0deg) rotateZ(0deg); }
+            0% {
+                transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            }
+
+            33% {
+                transform: rotateY(120deg) rotateX(20deg) rotateZ(10deg);
+            }
+
+            66% {
+                transform: rotateY(240deg) rotateX(-20deg) rotateZ(-10deg);
+            }
+
+            100% {
+                transform: rotateY(360deg) rotateX(0deg) rotateZ(0deg);
+            }
         }
-        
+
         @keyframes gradientFlow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
-        
+
         /* Floating Particles */
         .particle {
             position: absolute;
@@ -75,19 +103,66 @@
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
-        
-        .particle:nth-child(1) { width: 4px; height: 4px; top: 20%; left: 10%; animation-delay: 0s; }
-        .particle:nth-child(2) { width: 6px; height: 6px; top: 60%; left: 20%; animation-delay: 1s; }
-        .particle:nth-child(3) { width: 3px; height: 3px; top: 40%; left: 80%; animation-delay: 2s; }
-        .particle:nth-child(4) { width: 5px; height: 5px; top: 80%; left: 70%; animation-delay: 3s; }
-        .particle:nth-child(5) { width: 4px; height: 4px; top: 30%; left: 60%; animation-delay: 4s; }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.7; }
-            33% { transform: translateY(-30px) translateX(20px) scale(1.2); opacity: 1; }
-            66% { transform: translateY(20px) translateX(-15px) scale(0.8); opacity: 0.5; }
+
+        .particle:nth-child(1) {
+            width: 4px;
+            height: 4px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
         }
-        
+
+        .particle:nth-child(2) {
+            width: 6px;
+            height: 6px;
+            top: 60%;
+            left: 20%;
+            animation-delay: 1s;
+        }
+
+        .particle:nth-child(3) {
+            width: 3px;
+            height: 3px;
+            top: 40%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(4) {
+            width: 5px;
+            height: 5px;
+            top: 80%;
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .particle:nth-child(5) {
+            width: 4px;
+            height: 4px;
+            top: 30%;
+            left: 60%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px) scale(1);
+                opacity: 0.7;
+            }
+
+            33% {
+                transform: translateY(-30px) translateX(20px) scale(1.2);
+                opacity: 1;
+            }
+
+            66% {
+                transform: translateY(20px) translateX(-15px) scale(0.8);
+                opacity: 0.5;
+            }
+        }
+
         /* Advanced Typing Animation */
         .typing-container {
             position: relative;
@@ -96,7 +171,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .typing-text {
             font-size: 2rem;
             font-weight: 600;
@@ -109,17 +184,32 @@
             border-right: 3px solid #4ecdc4;
             animation: gradientText 3s ease-in-out infinite, blink 1s infinite;
         }
-        
+
         @keyframes gradientText {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
-        
+
         @keyframes blink {
-            0%, 50% { border-color: #4ecdc4; }
-            51%, 100% { border-color: transparent; }
+
+            0%,
+            50% {
+                border-color: #4ecdc4;
+            }
+
+            51%,
+            100% {
+                border-color: transparent;
+            }
         }
-        
+
         /* 3D Cards */
         .card-3d {
             transform-style: preserve-3d;
@@ -130,7 +220,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .card-3d::before {
             content: '';
             position: absolute;
@@ -141,18 +231,18 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transition: left 0.6s;
         }
-        
+
         .card-3d:hover::before {
             left: 100%;
         }
-        
+
         .card-3d:hover {
             transform: translateY(-20px) rotateX(10deg) rotateY(5deg) scale(1.05);
-            box-shadow: 
+            box-shadow:
                 0 30px 60px rgba(0, 0, 0, 0.3),
                 0 0 50px rgba(78, 205, 196, 0.2);
         }
-        
+
         /* Skill Progress with 3D Effect */
         .skill-progress {
             position: relative;
@@ -161,7 +251,7 @@
             overflow: hidden;
             height: 8px;
         }
-        
+
         .skill-progress-bar {
             height: 100%;
             border-radius: 10px;
@@ -171,12 +261,21 @@
             animation: progressGlow 2s ease-in-out infinite;
             box-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
         }
-        
+
         @keyframes progressGlow {
-            0%, 100% { background-position: 0% 50%; box-shadow: 0 0 20px rgba(78, 205, 196, 0.5); }
-            50% { background-position: 100% 50%; box-shadow: 0 0 30px rgba(255, 107, 107, 0.7); }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+                box-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
+            }
+
+            50% {
+                background-position: 100% 50%;
+                box-shadow: 0 0 30px rgba(255, 107, 107, 0.7);
+            }
         }
-        
+
         /* Project Cards with Advanced Hover */
         .project-card {
             transform-style: preserve-3d;
@@ -187,7 +286,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .project-card::after {
             content: '';
             position: absolute;
@@ -199,18 +298,18 @@
             opacity: 0;
             transition: opacity 0.6s;
         }
-        
+
         .project-card:hover::after {
             opacity: 1;
         }
-        
+
         .project-card:hover {
             transform: translateY(-15px) rotateX(5deg) rotateY(2deg);
-            box-shadow: 
+            box-shadow:
                 0 25px 50px rgba(0, 0, 0, 0.4),
                 0 0 40px rgba(78, 205, 196, 0.3);
         }
-        
+
         /* Navigation with Glass Effect */
         .nav-glass {
             background: rgba(15, 15, 35, 0.8);
@@ -218,12 +317,12 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .nav-glass.scrolled {
             background: rgba(15, 15, 35, 0.95);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-        
+
         /* Button Animations */
         .btn-3d {
             position: relative;
@@ -233,7 +332,7 @@
             border: none;
             overflow: hidden;
         }
-        
+
         .btn-3d::before {
             content: '';
             position: absolute;
@@ -244,16 +343,16 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.6s;
         }
-        
+
         .btn-3d:hover::before {
             left: 100%;
         }
-        
+
         .btn-3d:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 15px 30px rgba(78, 205, 196, 0.4);
         }
-        
+
         /* Code Animation */
         .code-animation {
             position: absolute;
@@ -262,69 +361,96 @@
             font-size: 14px;
             animation: codeFloat 8s ease-in-out infinite;
         }
-        
+
         @keyframes codeFloat {
-            0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.6; }
-            25% { transform: translateY(-20px) translateX(10px); opacity: 1; }
-            50% { transform: translateY(10px) translateX(-15px); opacity: 0.4; }
-            75% { transform: translateY(-15px) translateX(20px); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px);
+                opacity: 0.6;
+            }
+
+            25% {
+                transform: translateY(-20px) translateX(10px);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(10px) translateX(-15px);
+                opacity: 0.4;
+            }
+
+            75% {
+                transform: translateY(-15px) translateX(20px);
+                opacity: 0.8;
+            }
         }
-        
+
         /* Section Transitions */
         .section-enter {
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
         }
-        
+
         .section-enter.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: #1a1a2e;
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             border-radius: 4px;
         }
-        
+
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(45deg, #4ecdc4, #45b7d1);
         }
     </style>
 </head>
+
 <body class="bg-gray-900 text-white overflow-x-hidden">
     <!-- Navigation -->
     <nav class="nav-glass fixed top-0 w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-4">
-                    <div class="logo-3d w-14 h-14 rounded-2xl flex items-center justify-center text-xl font-bold text-white shadow-2xl">
+                    <div
+                        class="logo-3d w-14 h-14 rounded-2xl flex items-center justify-center text-xl font-bold text-white shadow-2xl">
                         &lt; Y &gt;
                     </div>
                     <div>
-                        <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Md. Yousuf Ali</span>
+                        <span
+                            class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Md.
+                            Yousuf Ali</span>
                         <div class="text-xs text-gray-400 code-font">Full Stack Developer</div>
                     </div>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">Home</a>
-                    <a href="#about" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">About</a>
-                    <a href="#skills" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">Skills</a>
-                    <a href="#projects" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">Projects</a>
-                    <a href="#contact" class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">Contact</a>
+                    <a href="#home"
+                        class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">Home</a>
+                    <a href="#about"
+                        class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">About</a>
+                    <a href="#skills"
+                        class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">Skills</a>
+                    <a href="#projects"
+                        class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">Projects</a>
+                    <a href="#contact"
+                        class="nav-link hover:text-blue-400 transition-all duration-300 font-medium relative">Contact</a>
                 </div>
                 <button class="md:hidden text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
@@ -339,66 +465,73 @@
         <div class="particle"></div>
         <div class="particle"></div>
         <div class="particle"></div>
-        
+
         <!-- Code Animation Elements -->
         <div class="code-animation top-20 left-10">const developer = "Yousuf Ali";</div>
         <div class="code-animation top-40 right-20" style="animation-delay: 1s;">function buildAmazingApps() {</div>
-        <div class="code-animation bottom-40 left-20" style="animation-delay: 2s;">  return "MERN Stack Magic";</div>
+        <div class="code-animation bottom-40 left-20" style="animation-delay: 2s;"> return "MERN Stack Magic";</div>
         <div class="code-animation bottom-20 right-10" style="animation-delay: 3s;">}</div>
         <div class="code-animation top-1/2 left-1/4" style="animation-delay: 1.5s;">// From Bangladesh 🇧🇩</div>
-        
+
         <div class="text-center z-10 max-w-6xl mx-auto px-4">
             <div class="mb-12">
-                <div class="logo-3d w-48 h-48 rounded-3xl flex items-center justify-center text-8xl font-bold text-white shadow-2xl mx-auto mb-8">
+                <div
+                    class="logo-3d w-48 h-48 rounded-3xl flex items-center justify-center text-8xl font-bold text-white shadow-2xl mx-auto mb-8">
                     &lt; Y &gt;
                 </div>
             </div>
-            
+
             <h1 class="text-5xl md:text-8xl font-black mb-8 leading-tight">
                 <span class="block">Hi, I'm</span>
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+                <span
+                    class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
                     Md. Yousuf Ali
                 </span>
             </h1>
-            
+
             <div class="typing-container mb-12">
                 <div class="typing-text code-font">Full Stack MERN Developer</div>
             </div>
-            
+
             <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Passionate Full Stack Developer from <span class="text-green-400 font-bold">Bogura, Bangladesh</span> 🇧🇩 
-                crafting scalable, innovative web applications with <span class="text-blue-400 font-semibold">React</span>, 
-                <span class="text-green-400 font-semibold">Node.js</span>, and <span class="text-yellow-400 font-semibold">MongoDB</span>
+                Passionate Full Stack Developer from <span class="text-green-400 font-bold">Bogura, Bangladesh</span>
+                🇧🇩
+                crafting scalable, innovative web applications with <span
+                    class="text-blue-400 font-semibold">React</span>,
+                <span class="text-green-400 font-semibold">Node.js</span>, and <span
+                    class="text-yellow-400 font-semibold">MongoDB</span>
             </p>
-            
+
             <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})" 
-                        class="btn-3d px-10 py-4 rounded-full font-bold text-lg shadow-xl">
+                <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})"
+                    class="btn-3d px-10 py-4 rounded-full font-bold text-lg shadow-xl">
                     🚀 Explore My Work
                 </button>
-                <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')" 
-                        class="border-2 border-white hover:bg-white hover:text-gray-900 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105">
+                <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')"
+                    class="border-2 border-white hover:bg-white hover:text-gray-900 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105">
                     💬 Let's Talk
                 </button>
             </div>
-            
+
             <div class="flex justify-center space-x-8 text-3xl">
-                <button onclick="window.open('https://github.com/yousuf-dev', '_blank')" 
-                        class="hover:text-green-400 transition-all transform hover:scale-125 hover:rotate-12">
+                <button onclick="window.open('https://github.com/yousufali156', '_blank')"
+                    class="hover:text-green-400 transition-all transform hover:scale-125 hover:rotate-12">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
                 </button>
-                <button onclick="window.open('https://linkedin.com/in/yousuf-dev', '_blank')" 
-                        class="hover:text-blue-400 transition-all transform hover:scale-125 hover:rotate-12">
+                <button onclick="window.open('https://www.linkedin.com/in/yousufali156/', '_blank')"
+                    class="hover:text-blue-400 transition-all transform hover:scale-125 hover:rotate-12">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                 </button>
-                <button onclick="window.open('https://yousufali-portfolio.vercel.app', '_blank')" 
-                        class="hover:text-purple-400 transition-all transform hover:scale-125 hover:rotate-12">
+                <button onclick="window.open('https://yousufali-portfolio.vercel.app', '_blank')"
+                    class="hover:text-purple-400 transition-all transform hover:scale-125 hover:rotate-12">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                     </svg>
                 </button>
             </div>
@@ -408,64 +541,102 @@
     <!-- About Section -->
     <section id="about" class="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 section-enter">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-5xl md:text-6xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+            <h2
+                class="text-5xl md:text-6xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
                 About Me
             </h2>
-            
+
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="relative">
                     <div class="w-96 h-96 mx-auto relative">
-                        <div class="logo-3d w-full h-full rounded-full flex items-center justify-center text-9xl font-bold shadow-2xl">
+                        <!-- <div class="logo-3d w-full h-full rounded-full flex items-center justify-center text-9xl font-bold shadow-2xl">
                             &lt; Y &gt;
+                        </div> -->
+
+                        <div
+                            class="logo-3d w-64 h-64 rounded-full overflow-hidden shadow-2xl flex items-center justify-center">
+                            <img src="https://i.ibb.co.com/G4kyQRfV/Yousuf-Ali-Logo.png" alt="Logo"
+                                class="w-full h-full object-cover" />
                         </div>
-                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-2xl animate-bounce">
-                            🇧🇩
+
+                        <div
+                            class="absolute -top-4 -right-4 w-24 h-24 rounded-full shadow-lg animate-bounce overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg"
+                                alt="Bangladesh Flag" class="w-full h-full object-cover rounded-full" />
                         </div>
+
+
+
+                        <!-- <div
+                            class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-green-700 to-red-700 rounded-full flex items-center justify-center shadow-lg animate-bounce overflow-hidden">
+                            <img src="https://i.ibb.co/QjY3G0B/rickshaw-art.jpg" alt="Bangladesh Culture"
+                                class="w-full h-full object-cover">
+                        </div> -->
+
+                       
+
                     </div>
                 </div>
-                
+
                 <div class="space-y-8">
                     <h3 class="text-4xl font-bold mb-8">
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
                             Full Stack MERN Developer
                         </span>
                     </h3>
-                    
+
                     <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
                         <p>
-                            I'm <strong class="text-white">Md. Yousuf Ali</strong>, a passionate Full Stack Developer from 
-                            <strong class="text-green-400">Bogura, Bangladesh</strong> 🇧🇩. With expertise in the MERN stack, 
-                            I specialize in creating high-performance, scalable web applications that solve real-world challenges.
+                            I'm <strong class="text-white">Md. Yousuf Ali</strong>, a passionate Full Stack Developer
+                            from
+                            <strong class="text-green-400">Bogura, Bangladesh</strong> 🇧🇩. With expertise in the MERN
+                            stack,
+                            I specialize in creating high-performance, scalable web applications that solve real-world
+                            challenges.
                         </p>
-                        
+
                         <p>
-                            My journey includes building comprehensive platforms like <strong class="text-blue-400">CourseHub</strong>, 
-                            <strong class="text-green-400">TaskMatch</strong>, and <strong class="text-purple-400">PortfoGen</strong>. 
-                            I'm proficient in modern technologies including React.js, Node.js, MongoDB, and AI integration tools.
+                            My journey includes building comprehensive platforms like <strong
+                                class="text-blue-400">CourseHub</strong>,
+                            <strong class="text-green-400">TaskMatch</strong>, and <strong
+                                class="text-purple-400">PortfoGen</strong>.
+                            I'm proficient in modern technologies including React.js, Node.js, MongoDB, and AI
+                            integration tools.
                         </p>
-                        
+
                         <p>
-                            With a <strong class="text-yellow-400">Master's degree in Economics</strong> and a passion for technology, 
+                            With a <strong class="text-yellow-400">Master's degree in Economics</strong> and a passion
+                            for technology,
                             I bring both analytical thinking and creative problem-solving to every project.
                         </p>
                     </div>
-                    
+
                     <div class="grid grid-cols-2 gap-6">
                         <div class="card-3d p-6 rounded-2xl">
                             <h4 class="font-bold text-blue-400 mb-3 text-lg">🎓 Education</h4>
-                            <p class="text-gray-300">MSS in Economics<br><span class="text-sm">National University, BD</span></p>
+                            <p class="text-gray-300">MSS in Economics<br><span class="text-sm">National University,
+                                    BD</span></p>
                         </div>
                         <div class="card-3d p-6 rounded-2xl">
                             <h4 class="font-bold text-green-400 mb-3 text-lg">📍 Location</h4>
-                            <p class="text-gray-300">Bogura, Bangladesh<br><span class="text-sm">🇧🇩 Available Remotely</span></p>
+                            <p class="text-gray-300">Bogura, Bangladesh<br><span class="text-sm">🇧🇩 Available
+                                    Remotely</span></p>
                         </div>
                     </div>
-                    
+
                     <div class="flex flex-wrap gap-4">
-                        <span class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 rounded-full font-semibold">Problem Solver</span>
-                        <span class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-3 rounded-full font-semibold">Team Player</span>
-                        <span class="bg-gradient-to-r from-green-500 to-green-600 px-6 py-3 rounded-full font-semibold">AI Enthusiast</span>
-                        <span class="bg-gradient-to-r from-yellow-500 to-yellow-600 px-6 py-3 rounded-full font-semibold">Lifelong Learner</span>
+                        <span
+                            class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 rounded-full font-semibold">Problem
+                            Solver</span>
+                        <span
+                            class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-3 rounded-full font-semibold">Team
+                            Player</span>
+                        <span
+                            class="bg-gradient-to-r from-green-500 to-green-600 px-6 py-3 rounded-full font-semibold">AI
+                            Enthusiast</span>
+                        <span
+                            class="bg-gradient-to-r from-yellow-500 to-yellow-600 px-6 py-3 rounded-full font-semibold">Lifelong
+                            Learner</span>
                     </div>
                 </div>
             </div>
@@ -475,10 +646,11 @@
     <!-- Skills Section -->
     <section id="skills" class="py-24 bg-gradient-to-br from-gray-800 via-gray-900 to-black section-enter">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-5xl md:text-6xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+            <h2
+                class="text-5xl md:text-6xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
                 Technical Expertise
             </h2>
-            
+
             <div class="grid lg:grid-cols-3 gap-8 mb-16">
                 <!-- Frontend Skills -->
                 <div class="card-3d p-8 rounded-3xl">
@@ -494,7 +666,7 @@
                                 <div class="skill-progress-bar" style="width: 85%"></div>
                             </div>
                         </div>
-                        
+
                         <div class="skill-item">
                             <div class="flex justify-between mb-3">
                                 <span class="font-semibold text-lg">JavaScript</span>
@@ -504,7 +676,7 @@
                                 <div class="skill-progress-bar" style="width: 90%"></div>
                             </div>
                         </div>
-                        
+
                         <div class="skill-item">
                             <div class="flex justify-between mb-3">
                                 <span class="font-semibold text-lg">Tailwind CSS</span>
@@ -514,7 +686,7 @@
                                 <div class="skill-progress-bar" style="width: 88%"></div>
                             </div>
                         </div>
-                        
+
                         <div class="skill-item">
                             <div class="flex justify-between mb-3">
                                 <span class="font-semibold text-lg">Next.js</span>
@@ -541,7 +713,7 @@
                                 <div class="skill-progress-bar" style="width: 82%"></div>
                             </div>
                         </div>
-                        
+
                         <div class="skill-item">
                             <div class="flex justify-between mb-3">
                                 <span class="font-semibold text-lg">Express.js</span>
@@ -551,7 +723,7 @@
                                 <div class="skill-progress-bar" style="width: 80%"></div>
                             </div>
                         </div>
-                        
+
                         <div class="skill-item">
                             <div class="flex justify-between mb-3">
                                 <span class="font-semibold text-lg">REST APIs</span>
@@ -561,7 +733,7 @@
                                 <div class="skill-progress-bar" style="width: 78%"></div>
                             </div>
                         </div>
-                        
+
                         <div class="skill-item">
                             <div class="flex justify-between mb-3">
                                 <span class="font-semibold text-lg">MongoDB</span>
@@ -588,7 +760,7 @@
                                 <div class="skill-progress-bar" style="width: 85%"></div>
                             </div>
                         </div>
-                        
+
                         <div class="skill-item">
                             <div class="flex justify-between mb-3">
                                 <span class="font-semibold text-lg">Firebase</span>
@@ -598,7 +770,7 @@
                                 <div class="skill-progress-bar" style="width: 75%"></div>
                             </div>
                         </div>
-                        
+
                         <div class="skill-item">
                             <div class="flex justify-between mb-3">
                                 <span class="font-semibold text-lg">AI Tools</span>
@@ -608,7 +780,7 @@
                                 <div class="skill-progress-bar" style="width: 80%"></div>
                             </div>
                         </div>
-                        
+
                         <div class="skill-item">
                             <div class="flex justify-between mb-3">
                                 <span class="font-semibold text-lg">Stripe Integration</span>
@@ -626,16 +798,27 @@
             <div class="text-center">
                 <h3 class="text-3xl font-bold mb-12 text-gray-300">Technology Stack</h3>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <span class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">React.js</span>
-                    <span class="bg-gradient-to-r from-black to-gray-800 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Next.js</span>
-                    <span class="bg-gradient-to-r from-green-500 to-green-600 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Node.js</span>
-                    <span class="bg-gradient-to-r from-gray-600 to-gray-700 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Express.js</span>
-                    <span class="bg-gradient-to-r from-green-400 to-green-500 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">MongoDB</span>
-                    <span class="bg-gradient-to-r from-blue-400 to-blue-500 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">TypeScript</span>
-                    <span class="bg-gradient-to-r from-cyan-400 to-cyan-500 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Tailwind</span>
-                    <span class="bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Firebase</span>
-                    <span class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Framer Motion</span>
-                    <span class="bg-gradient-to-r from-yellow-500 to-yellow-600 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Stripe</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">React.js</span>
+                    <span
+                        class="bg-gradient-to-r from-black to-gray-800 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Next.js</span>
+                    <span
+                        class="bg-gradient-to-r from-green-500 to-green-600 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Node.js</span>
+                    <span
+                        class="bg-gradient-to-r from-gray-600 to-gray-700 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Express.js</span>
+                    <span
+                        class="bg-gradient-to-r from-green-400 to-green-500 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">MongoDB</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-400 to-blue-500 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">TypeScript</span>
+                    <span
+                        class="bg-gradient-to-r from-cyan-400 to-cyan-500 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Tailwind</span>
+                    <span
+                        class="bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Firebase</span>
+                    <span
+                        class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Framer
+                        Motion</span>
+                    <span
+                        class="bg-gradient-to-r from-yellow-500 to-yellow-600 px-6 py-3 rounded-full font-semibold hover:scale-110 transition-transform cursor-pointer">Stripe</span>
                 </div>
             </div>
         </div>
@@ -644,36 +827,45 @@
     <!-- Projects Section -->
     <section id="projects" class="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 section-enter">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-5xl md:text-6xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2
+                class="text-5xl md:text-6xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                 Featured Projects
             </h2>
-            
+
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- CourseHub Project -->
                 <div class="project-card rounded-3xl p-8">
                     <div class="relative mb-8 overflow-hidden rounded-2xl">
-                        <div class="w-full h-64 bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 flex items-center justify-center text-7xl relative">
+                        <div
+                            class="w-full h-64 bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 flex items-center justify-center text-7xl relative">
                             📚
                             <div class="absolute inset-0 bg-black/20"></div>
                         </div>
                     </div>
                     <h3 class="text-3xl font-bold mb-4 text-blue-400">CourseHub</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed text-lg">
-                        Comprehensive Course Management Platform with secure enrollment system, Firebase Authentication, 
-                        and MongoDB aggregation. Features advanced course browsing, enrollment limits, and intuitive user dashboard.
+                        Comprehensive Course Management Platform with secure enrollment system, Firebase Authentication,
+                        and MongoDB aggregation. Features advanced course browsing, enrollment limits, and intuitive
+                        user dashboard.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-blue-600/20 border border-blue-500 px-4 py-2 rounded-full text-sm font-medium text-blue-300">React.js</span>
-                        <span class="bg-orange-600/20 border border-orange-500 px-4 py-2 rounded-full text-sm font-medium text-orange-300">Firebase</span>
-                        <span class="bg-green-600/20 border border-green-500 px-4 py-2 rounded-full text-sm font-medium text-green-300">Node.js</span>
-                        <span class="bg-yellow-600/20 border border-yellow-500 px-4 py-2 rounded-full text-sm font-medium text-yellow-300">MongoDB</span>
-                        <span class="bg-purple-600/20 border border-purple-500 px-4 py-2 rounded-full text-sm font-medium text-purple-300">JWT</span>
+                        <span
+                            class="bg-blue-600/20 border border-blue-500 px-4 py-2 rounded-full text-sm font-medium text-blue-300">React.js</span>
+                        <span
+                            class="bg-orange-600/20 border border-orange-500 px-4 py-2 rounded-full text-sm font-medium text-orange-300">Firebase</span>
+                        <span
+                            class="bg-green-600/20 border border-green-500 px-4 py-2 rounded-full text-sm font-medium text-green-300">Node.js</span>
+                        <span
+                            class="bg-yellow-600/20 border border-yellow-500 px-4 py-2 rounded-full text-sm font-medium text-yellow-300">MongoDB</span>
+                        <span
+                            class="bg-purple-600/20 border border-purple-500 px-4 py-2 rounded-full text-sm font-medium text-purple-300">JWT</span>
                     </div>
                     <div class="flex gap-4">
                         <button onclick="window.open('#', '_blank')" class="btn-3d px-6 py-3 rounded-xl font-semibold">
                             🚀 Live Demo
                         </button>
-                        <button onclick="window.open('#', '_blank')" class="border-2 border-gray-600 hover:border-blue-400 px-6 py-3 rounded-xl font-semibold transition-all">
+                        <button onclick="window.open('#', '_blank')"
+                            class="border-2 border-gray-600 hover:border-blue-400 px-6 py-3 rounded-xl font-semibold transition-all">
                             📂 GitHub
                         </button>
                     </div>
@@ -682,28 +874,36 @@
                 <!-- TaskMatch Project -->
                 <div class="project-card rounded-3xl p-8">
                     <div class="relative mb-8 overflow-hidden rounded-2xl">
-                        <div class="w-full h-64 bg-gradient-to-br from-green-500 via-teal-600 to-blue-700 flex items-center justify-center text-7xl relative">
+                        <div
+                            class="w-full h-64 bg-gradient-to-br from-green-500 via-teal-600 to-blue-700 flex items-center justify-center text-7xl relative">
                             💼
                             <div class="absolute inset-0 bg-black/20"></div>
                         </div>
                     </div>
                     <h3 class="text-3xl font-bold mb-4 text-green-400">TaskMatch</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed text-lg">
-                        Fast & Easy Freelance Task Marketplace with real-time bidding system. Features secure task posting, 
+                        Fast & Easy Freelance Task Marketplace with real-time bidding system. Features secure task
+                        posting,
                         Firebase authentication, comprehensive user dashboard, and live bid count updates.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-blue-600/20 border border-blue-500 px-4 py-2 rounded-full text-sm font-medium text-blue-300">React.js</span>
-                        <span class="bg-cyan-600/20 border border-cyan-500 px-4 py-2 rounded-full text-sm font-medium text-cyan-300">Tailwind</span>
-                        <span class="bg-green-600/20 border border-green-500 px-4 py-2 rounded-full text-sm font-medium text-green-300">Express.js</span>
-                        <span class="bg-yellow-600/20 border border-yellow-500 px-4 py-2 rounded-full text-sm font-medium text-yellow-300">MongoDB</span>
-                        <span class="bg-orange-600/20 border border-orange-500 px-4 py-2 rounded-full text-sm font-medium text-orange-300">Firebase</span>
+                        <span
+                            class="bg-blue-600/20 border border-blue-500 px-4 py-2 rounded-full text-sm font-medium text-blue-300">React.js</span>
+                        <span
+                            class="bg-cyan-600/20 border border-cyan-500 px-4 py-2 rounded-full text-sm font-medium text-cyan-300">Tailwind</span>
+                        <span
+                            class="bg-green-600/20 border border-green-500 px-4 py-2 rounded-full text-sm font-medium text-green-300">Express.js</span>
+                        <span
+                            class="bg-yellow-600/20 border border-yellow-500 px-4 py-2 rounded-full text-sm font-medium text-yellow-300">MongoDB</span>
+                        <span
+                            class="bg-orange-600/20 border border-orange-500 px-4 py-2 rounded-full text-sm font-medium text-orange-300">Firebase</span>
                     </div>
                     <div class="flex gap-4">
                         <button onclick="window.open('#', '_blank')" class="btn-3d px-6 py-3 rounded-xl font-semibold">
                             🚀 Live Demo
                         </button>
-                        <button onclick="window.open('#', '_blank')" class="border-2 border-gray-600 hover:border-green-400 px-6 py-3 rounded-xl font-semibold transition-all">
+                        <button onclick="window.open('#', '_blank')"
+                            class="border-2 border-gray-600 hover:border-green-400 px-6 py-3 rounded-xl font-semibold transition-all">
                             📂 GitHub
                         </button>
                     </div>
@@ -712,28 +912,38 @@
                 <!-- PortfoGen Project -->
                 <div class="project-card rounded-3xl p-8">
                     <div class="relative mb-8 overflow-hidden rounded-2xl">
-                        <div class="w-full h-64 bg-gradient-to-br from-purple-500 via-pink-600 to-red-700 flex items-center justify-center text-7xl relative">
+                        <div
+                            class="w-full h-64 bg-gradient-to-br from-purple-500 via-pink-600 to-red-700 flex items-center justify-center text-7xl relative">
                             🎨
                             <div class="absolute inset-0 bg-black/20"></div>
                         </div>
                     </div>
                     <h3 class="text-3xl font-bold mb-4 text-purple-400">PortfoGen</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed text-lg">
-                        Modern Portfolio Generator with live preview & multiple responsive themes. Features 5+ beautiful templates, 
+                        Modern Portfolio Generator with live preview & multiple responsive themes. Features 5+ beautiful
+                        templates,
                         light/dark mode toggle, real-time content preview, and seamless deployment options.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-blue-600/20 border border-blue-500 px-4 py-2 rounded-full text-sm font-medium text-blue-300">React (Vite)</span>
-                        <span class="bg-cyan-600/20 border border-cyan-500 px-4 py-2 rounded-full text-sm font-medium text-cyan-300">Tailwind</span>
-                        <span class="bg-pink-600/20 border border-pink-500 px-4 py-2 rounded-full text-sm font-medium text-pink-300">DaisyUI</span>
-                        <span class="bg-purple-600/20 border border-purple-500 px-4 py-2 rounded-full text-sm font-medium text-purple-300">Framer Motion</span>
-                        <span class="bg-green-600/20 border border-green-500 px-4 py-2 rounded-full text-sm font-medium text-green-300">Netlify</span>
+                        <span
+                            class="bg-blue-600/20 border border-blue-500 px-4 py-2 rounded-full text-sm font-medium text-blue-300">React
+                            (Vite)</span>
+                        <span
+                            class="bg-cyan-600/20 border border-cyan-500 px-4 py-2 rounded-full text-sm font-medium text-cyan-300">Tailwind</span>
+                        <span
+                            class="bg-pink-600/20 border border-pink-500 px-4 py-2 rounded-full text-sm font-medium text-pink-300">DaisyUI</span>
+                        <span
+                            class="bg-purple-600/20 border border-purple-500 px-4 py-2 rounded-full text-sm font-medium text-purple-300">Framer
+                            Motion</span>
+                        <span
+                            class="bg-green-600/20 border border-green-500 px-4 py-2 rounded-full text-sm font-medium text-green-300">Netlify</span>
                     </div>
                     <div class="flex gap-4">
                         <button onclick="window.open('#', '_blank')" class="btn-3d px-6 py-3 rounded-xl font-semibold">
                             🚀 Live Demo
                         </button>
-                        <button onclick="window.open('#', '_blank')" class="border-2 border-gray-600 hover:border-purple-400 px-6 py-3 rounded-xl font-semibold transition-all">
+                        <button onclick="window.open('#', '_blank')"
+                            class="border-2 border-gray-600 hover:border-purple-400 px-6 py-3 rounded-xl font-semibold transition-all">
                             📂 GitHub
                         </button>
                     </div>
@@ -742,27 +952,36 @@
                 <!-- DevTalks Project -->
                 <div class="project-card rounded-3xl p-8">
                     <div class="relative mb-8 overflow-hidden rounded-2xl">
-                        <div class="w-full h-64 bg-gradient-to-br from-indigo-500 via-blue-600 to-cyan-700 flex items-center justify-center text-7xl relative">
+                        <div
+                            class="w-full h-64 bg-gradient-to-br from-indigo-500 via-blue-600 to-cyan-700 flex items-center justify-center text-7xl relative">
                             💬
                             <div class="absolute inset-0 bg-black/20"></div>
                         </div>
                     </div>
                     <h3 class="text-3xl font-bold mb-4 text-indigo-400">DevTalks</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed text-lg">
-                        Feature-rich MERN Stack forum platform for meaningful real-time conversations. Includes secure authentication, 
+                        Feature-rich MERN Stack forum platform for meaningful real-time conversations. Includes secure
+                        authentication,
                         role-based memberships, Stripe payment integration, and powerful admin dashboard.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-blue-600/20 border border-blue-500 px-4 py-2 rounded-full text-sm font-medium text-blue-300">MERN Stack</span>
-                        <span class="bg-yellow-600/20 border border-yellow-500 px-4 py-2 rounded-full text-sm font-medium text-yellow-300">Stripe</span>
-                        <span class="bg-red-600/20 border border-red-500 px-4 py-2 rounded-full text-sm font-medium text-red-300">Real-time</span>
-                        <span class="bg-purple-600/20 border border-purple-500 px-4 py-2 rounded-full text-sm font-medium text-purple-300">Admin Panel</span>
+                        <span
+                            class="bg-blue-600/20 border border-blue-500 px-4 py-2 rounded-full text-sm font-medium text-blue-300">MERN
+                            Stack</span>
+                        <span
+                            class="bg-yellow-600/20 border border-yellow-500 px-4 py-2 rounded-full text-sm font-medium text-yellow-300">Stripe</span>
+                        <span
+                            class="bg-red-600/20 border border-red-500 px-4 py-2 rounded-full text-sm font-medium text-red-300">Real-time</span>
+                        <span
+                            class="bg-purple-600/20 border border-purple-500 px-4 py-2 rounded-full text-sm font-medium text-purple-300">Admin
+                            Panel</span>
                     </div>
                     <div class="flex gap-4">
                         <button onclick="window.open('#', '_blank')" class="btn-3d px-6 py-3 rounded-xl font-semibold">
                             🚀 Live Demo
                         </button>
-                        <button onclick="window.open('#', '_blank')" class="border-2 border-gray-600 hover:border-indigo-400 px-6 py-3 rounded-xl font-semibold transition-all">
+                        <button onclick="window.open('#', '_blank')"
+                            class="border-2 border-gray-600 hover:border-indigo-400 px-6 py-3 rounded-xl font-semibold transition-all">
                             📂 GitHub
                         </button>
                     </div>
@@ -774,53 +993,55 @@
     <!-- Contact Section -->
     <section id="contact" class="py-24 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 section-enter">
         <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-5xl md:text-6xl font-black mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            <h2
+                class="text-5xl md:text-6xl font-black mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Let's Create Something Amazing
             </h2>
             <p class="text-xl md:text-2xl text-gray-200 mb-16 leading-relaxed max-w-3xl mx-auto">
-                Ready to transform your ideas into reality? I'm passionate about building scalable, 
-                innovative web applications that make a difference. Let's collaborate and create something extraordinary!
+                Ready to transform your ideas into reality? I'm passionate about building scalable,
+                innovative web applications that make a difference. Let's collaborate and create something
+                extraordinary!
             </p>
-            
+
             <div class="grid md:grid-cols-3 gap-8 mb-16">
                 <div class="card-3d p-8 rounded-3xl text-center">
                     <div class="text-5xl mb-6">📧</div>
                     <h3 class="font-bold mb-4 text-xl">Email</h3>
                     <p class="text-gray-300 mb-6">mdyousufali.dev@gmail.com</p>
-                    <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')" 
-                            class="btn-3d px-6 py-3 rounded-xl font-semibold">
+                    <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')"
+                        class="btn-3d px-6 py-3 rounded-xl font-semibold">
                         Send Message
                     </button>
                 </div>
-                
+
                 <div class="card-3d p-8 rounded-3xl text-center">
                     <div class="text-5xl mb-6">💼</div>
                     <h3 class="font-bold mb-4 text-xl">LinkedIn</h3>
                     <p class="text-gray-300 mb-6">Professional Network</p>
-                    <button onclick="window.open('https://linkedin.com/in/yousuf-dev', '_blank')" 
-                            class="btn-3d px-6 py-3 rounded-xl font-semibold">
+                    <button onclick="window.open('https://linkedin.com/in/yousuf-dev', '_blank')"
+                        class="btn-3d px-6 py-3 rounded-xl font-semibold">
                         Connect
                     </button>
                 </div>
-                
+
                 <div class="card-3d p-8 rounded-3xl text-center">
                     <div class="text-5xl mb-6">🌐</div>
                     <h3 class="font-bold mb-4 text-xl">Portfolio</h3>
                     <p class="text-gray-300 mb-6">yousufali-portfolio.vercel.app</p>
-                    <button onclick="window.open('https://yousufali-portfolio.vercel.app', '_blank')" 
-                            class="btn-3d px-6 py-3 rounded-xl font-semibold">
+                    <button onclick="window.open('https://yousufali-portfolio.vercel.app', '_blank')"
+                        class="btn-3d px-6 py-3 rounded-xl font-semibold">
                         Visit Site
                     </button>
                 </div>
             </div>
-            
+
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')" 
-                        class="bg-white text-gray-900 hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-2xl">
+                <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')"
+                    class="bg-white text-gray-900 hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-2xl">
                     📄 Download Resume
                 </button>
-                <button onclick="window.open('https://github.com/yousuf-dev', '_blank')" 
-                        class="border-2 border-white hover:bg-white hover:text-gray-900 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105">
+                <button onclick="window.open('https://github.com/yousuf-dev', '_blank')"
+                    class="border-2 border-white hover:bg-white hover:text-gray-900 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105">
                     🐙 View GitHub
                 </button>
             </div>
@@ -836,32 +1057,41 @@
                         &lt; Y &gt;
                     </div>
                     <div>
-                        <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Md. Yousuf Ali</span>
+                        <span
+                            class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Md.
+                            Yousuf Ali</span>
                         <div class="text-gray-400 code-font">Full Stack MERN Developer</div>
                     </div>
                 </div>
-                
+
                 <div class="flex justify-center space-x-12 mb-8 text-2xl">
-                    <button onclick="window.open('https://github.com/yousuf-dev', '_blank')" class="text-gray-400 hover:text-white transition-all transform hover:scale-125">
+                    <button onclick="window.open('https://github.com/yousuf-dev', '_blank')"
+                        class="text-gray-400 hover:text-white transition-all transform hover:scale-125">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
                     </button>
-                    <button onclick="window.open('https://linkedin.com/in/yousuf-dev', '_blank')" class="text-gray-400 hover:text-white transition-all transform hover:scale-125">
+                    <button onclick="window.open('https://linkedin.com/in/yousuf-dev', '_blank')"
+                        class="text-gray-400 hover:text-white transition-all transform hover:scale-125">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
                     </button>
-                    <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')" class="text-gray-400 hover:text-white transition-all transform hover:scale-125">
+                    <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')"
+                        class="text-gray-400 hover:text-white transition-all transform hover:scale-125">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.98L12 10.09l9.384-6.269h.98c.904 0 1.636.732 1.636 1.636z"/>
+                            <path
+                                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.98L12 10.09l9.384-6.269h.98c.904 0 1.636.732 1.636 1.636z" />
                         </svg>
                     </button>
                 </div>
-                
+
                 <div class="border-t border-gray-800 pt-8">
                     <p class="text-gray-400 text-lg">
-                        © 2024 <span class="text-white font-semibold">Md. Yousuf Ali</span> - Full Stack MERN Developer from <span class="text-green-400">Bogura, Bangladesh</span> 🇧🇩
+                        © 2024 <span class="text-white font-semibold">Md. Yousuf Ali</span> - Full Stack MERN Developer
+                        from <span class="text-green-400">Bogura, Bangladesh</span> 🇧🇩
                     </p>
                     <p class="text-gray-500 mt-2">
                         Crafting scalable web applications that solve real-world challenges
@@ -891,7 +1121,7 @@
         const texts = [
             'Full Stack MERN Developer',
             'React.js Specialist',
-            'Node.js Expert', 
+            'Node.js Expert',
             'MongoDB Developer',
             'AI Tools Enthusiast',
             'Problem Solver',
@@ -904,7 +1134,7 @@
 
         function typeWriter() {
             const currentText = texts[textIndex];
-            
+
             if (isDeleting) {
                 typingElement.textContent = currentText.substring(0, charIndex - 1);
                 charIndex--;
@@ -945,7 +1175,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    
+
                     // Animate skill progress bars
                     const progressBars = entry.target.querySelectorAll('.skill-progress-bar');
                     progressBars.forEach(bar => {
@@ -967,10 +1197,10 @@
         // Add navigation link active states
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
-            link.addEventListener('mouseenter', function() {
+            link.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-2px)';
             });
-            link.addEventListener('mouseleave', function() {
+            link.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(0)';
             });
         });
@@ -980,12 +1210,12 @@
         function updateParticles() {
             const particles = document.querySelectorAll('.particle');
             const scrollY = window.scrollY;
-            
+
             particles.forEach((particle, index) => {
                 const speed = (index + 1) * 0.5;
                 particle.style.transform = `translateY(${scrollY * speed}px)`;
             });
-            
+
             ticking = false;
         }
 
@@ -1005,5 +1235,7 @@
             }, 100);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'964529fd002b4ea1',t:'MTc1MzM3ODQyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'964529fd002b4ea1',t:'MTc1MzM3ODQyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
 </html>
