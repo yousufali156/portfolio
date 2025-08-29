@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-new",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/yousufali156/portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/yousufali156/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yousufali156/portfolio.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "vite": "^7.1.3"
+  }
+}

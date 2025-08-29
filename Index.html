@@ -457,8 +457,11 @@
         </div>
     </nav>
 
+
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex mt-20 items-center justify-center hero-3d relative">
+    <section id="home"
+        class="relative min-h-screen mt-4 flex flex-col items-center justify-center bg-black overflow-hidden mb-0">
+
         <!-- Floating Particles -->
         <div class="particle"></div>
         <div class="particle"></div>
@@ -467,21 +470,20 @@
         <div class="particle"></div>
 
         <!-- Code Animation Elements -->
-        <div class="code-animation top-20 left-10">const developer = "Yousuf Ali";</div>
-        <div class="code-animation top-40 right-20" style="animation-delay: 1s;">function buildAmazingApps() {</div>
-        <div class="code-animation bottom-40 left-20" style="animation-delay: 2s;"> return "MERN Stack Magic";</div>
-        <div class="code-animation bottom-20 right-10" style="animation-delay: 3s;">}</div>
-        <div class="code-animation top-1/2 left-1/4" style="animation-delay: 1.5s;">// From Bangladesh 🇧🇩</div>
+        <div class="code-animation top-20 left-6 text-sm md:text-lg">const developer = "Yousuf Ali";</div>
+        <div class="code-animation top-40 right-6 text-sm md:text-lg" style="animation-delay: 1s;">function
+            buildAmazingApps() {</div>
+        <div class="code-animation bottom-40 left-6 text-sm md:text-lg" style="animation-delay: 2s;"> return "MERN Stack
+            Magic";</div>
+        <div class="code-animation bottom-20 right-6 text-sm md:text-lg" style="animation-delay: 3s;">}</div>
+        <div class="code-animation top-1/2 left-1/4 text-xs md:text-base" style="animation-delay: 1.5s;">// From
+            Bangladesh 🇧🇩</div>
 
-        <div class="text-center z-10 max-w-6xl mx-auto px-4">
-            <div class="mb-12">
-                <div
-                    class="logo-3d w-48 h-48 rounded-3xl flex items-center justify-center text-8xl font-bold text-white shadow-2xl mx-auto mb-8">
-                    &lt; Y &gt;
-                </div>
-            </div>
+        <!-- Main Content -->
+        <div class="relative text-center z-10 max-w-6xl mx-auto">
 
-            <h1 class="text-5xl md:text-8xl font-black mb-8 leading-tight">
+            <!-- Heading -->
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
                 <span class="block">Hi, I'm</span>
                 <span
                     class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
@@ -489,31 +491,39 @@
                 </span>
             </h1>
 
-            <div class="typing-container mb-12">
-                <div class="typing-text code-font">Full Stack MERN Developer</div>
+            <!-- Typing Text -->
+            <div class="typing-container mb-8">
+                <div class="typing-text code-font text-base sm:text-lg md:text-xl lg:text-2xl">
+                    Full Stack MERN Developer
+                </div>
             </div>
 
-            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            <!-- Description -->
+            <p
+                class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed px-2">
                 Passionate Full Stack Developer from <span class="text-green-400 font-bold">Bogura, Bangladesh</span>
                 🇧🇩
-                crafting scalable, innovative web applications with <span
-                    class="text-blue-400 font-semibold">React</span>,
-                <span class="text-green-400 font-semibold">Node.js</span>, and <span
-                    class="text-yellow-400 font-semibold">MongoDB</span>
+                crafting scalable, innovative web applications with
+                <span class="text-blue-400 font-semibold">React</span>,
+                <span class="text-green-400 font-semibold">Node.js</span>, and
+                <span class="text-yellow-400 font-semibold">MongoDB</span>.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-10 px-2">
                 <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})"
-                    class="btn-3d px-10 py-4 rounded-full font-bold text-lg shadow-xl">
+                    class="btn-3d px-8 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-xl">
                     🚀 Explore My Work
                 </button>
                 <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')"
-                    class="border-2 border-white hover:bg-white hover:text-gray-900 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105">
+                    class="border-2 border-white hover:bg-white hover:text-gray-900 px-8 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all transform hover:scale-105">
                     💬 Let's Talk
                 </button>
             </div>
 
-            <div class="flex justify-center space-x-8 text-3xl">
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-6 sm:space-x-8 text-2xl sm:text-3xl mb-0">
+                <!-- GitHub -->
                 <button onclick="window.open('https://github.com/yousufali156', '_blank')"
                     class="hover:text-green-400 transition-all transform hover:scale-125 hover:rotate-12">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -521,6 +531,8 @@
                             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
                 </button>
+
+                <!-- LinkedIn -->
                 <button onclick="window.open('https://www.linkedin.com/in/yousufali156/', '_blank')"
                     class="hover:text-blue-400 transition-all transform hover:scale-125 hover:rotate-12">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -528,6 +540,8 @@
                             d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                 </button>
+
+                <!-- Portfolio -->
                 <button onclick="window.open('https://yousufali-portfolio.vercel.app', '_blank')"
                     class="hover:text-purple-400 transition-all transform hover:scale-125 hover:rotate-12">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -538,110 +552,112 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 section-enter">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2
-                class="text-5xl md:text-6xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                About Me
-            </h2>
-
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative">
-                    <div class="w-96 h-96 mx-auto relative">
-                        <!-- <div class="logo-3d w-full h-full rounded-full flex items-center justify-center text-9xl font-bold shadow-2xl">
-                            &lt; Y &gt;
-                        </div> -->
-
-                        <div
-                            class="logo-3d w-64 h-64 rounded-full overflow-hidden shadow-2xl flex items-center justify-center">
-                            <img src="https://i.ibb.co.com/G4kyQRfV/Yousuf-Ali-Logo.png" alt="Logo"
-                                class="w-full h-full object-cover" />
-                        </div>
-
-                        <div
-                            class="absolute -top-4 -right-4 w-24 h-24 rounded-full shadow-lg animate-bounce overflow-hidden">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg"
-                                alt="Bangladesh Flag" class="w-full h-full object-cover rounded-full" />
-                        </div>
 
 
-
-                        <!-- <div
-                            class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-green-700 to-red-700 rounded-full flex items-center justify-center shadow-lg animate-bounce overflow-hidden">
-                            <img src="https://i.ibb.co/QjY3G0B/rickshaw-art.jpg" alt="Bangladesh Culture"
-                                class="w-full h-full object-cover">
-                        </div> -->
-
-                       
-
-                    </div>
-                </div>
-
-                <div class="space-y-8">
-                    <h3 class="text-4xl font-bold mb-8">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
-                            Full Stack MERN Developer
-                        </span>
-                    </h3>
-
-                    <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
-                        <p>
-                            I'm <strong class="text-white">Md. Yousuf Ali</strong>, a passionate Full Stack Developer
-                            from
-                            <strong class="text-green-400">Bogura, Bangladesh</strong> 🇧🇩. With expertise in the MERN
-                            stack,
-                            I specialize in creating high-performance, scalable web applications that solve real-world
-                            challenges.
-                        </p>
-
-                        <p>
-                            My journey includes building comprehensive platforms like <strong
-                                class="text-blue-400">CourseHub</strong>,
-                            <strong class="text-green-400">TaskMatch</strong>, and <strong
-                                class="text-purple-400">PortfoGen</strong>.
-                            I'm proficient in modern technologies including React.js, Node.js, MongoDB, and AI
-                            integration tools.
-                        </p>
-
-                        <p>
-                            With a <strong class="text-yellow-400">Master's degree in Economics</strong> and a passion
-                            for technology,
-                            I bring both analytical thinking and creative problem-solving to every project.
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="card-3d p-6 rounded-2xl">
-                            <h4 class="font-bold text-blue-400 mb-3 text-lg">🎓 Education</h4>
-                            <p class="text-gray-300">MSS in Economics<br><span class="text-sm">National University,
-                                    BD</span></p>
-                        </div>
-                        <div class="card-3d p-6 rounded-2xl">
-                            <h4 class="font-bold text-green-400 mb-3 text-lg">📍 Location</h4>
-                            <p class="text-gray-300">Bogura, Bangladesh<br><span class="text-sm">🇧🇩 Available
-                                    Remotely</span></p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-wrap gap-4">
-                        <span
-                            class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 rounded-full font-semibold">Problem
-                            Solver</span>
-                        <span
-                            class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-3 rounded-full font-semibold">Team
-                            Player</span>
-                        <span
-                            class="bg-gradient-to-r from-green-500 to-green-600 px-6 py-3 rounded-full font-semibold">AI
-                            Enthusiast</span>
-                        <span
-                            class="bg-gradient-to-r from-yellow-500 to-yellow-600 px-6 py-3 rounded-full font-semibold">Lifelong
-                            Learner</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Video Section -->
+    <section class="flex justify-center items-center px-2 py-4 mt-0 bg-black">
+        <div class="w-full aspect-[16/9] rounded-2xl shadow-lg overflow-hidden
+           sm:max-w-full md:max-w-[800px] lg:max-w-[1024px] xl:max-w-[1280px]">
+            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="/Yousufali156.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 section-enter">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2
+      class="text-5xl md:text-6xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+      About Me
+    </h2>
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative flex justify-center">
+        <div class="relative">
+          <!-- Logo Big & Centered -->
+          <div
+            class="logo-3d w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl flex items-center justify-center">
+            <img src="https://i.ibb.co.com/G4kyQRfV/Yousuf-Ali-Logo.png" alt="Logo"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <!-- Floating Bangladesh Flag -->
+          <div
+            class="absolute -top-6 -right-6 w-28 h-28 rounded-full shadow-lg animate-bounce overflow-hidden">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg"
+              alt="Bangladesh Flag" class="w-full h-full object-cover rounded-full" />
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        <h3 class="text-4xl font-bold mb-8">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+            Full Stack MERN Developer
+          </span>
+        </h3>
+
+        <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
+          <p>
+            I'm <strong class="text-white">Md. Yousuf Ali</strong>, a passionate Full Stack Developer
+            from
+            <strong class="text-green-400">Bogura, Bangladesh</strong> 🇧🇩. With expertise in the MERN
+            stack,
+            I specialize in creating high-performance, scalable web applications that solve real-world
+            challenges.
+          </p>
+
+          <p>
+            My journey includes building comprehensive platforms like <strong
+              class="text-blue-400">CourseHub</strong>,
+            <strong class="text-green-400">TaskMatch</strong>, and <strong
+              class="text-purple-400">PortfoGen</strong>.
+            I'm proficient in modern technologies including React.js, Node.js, MongoDB, and AI
+            integration tools.
+          </p>
+
+          <p>
+            With a <strong class="text-yellow-400">Master's degree in Economics</strong> and a passion
+            for technology,
+            I bring both analytical thinking and creative problem-solving to every project.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="card-3d p-6 rounded-2xl">
+            <h4 class="font-bold text-blue-400 mb-3 text-lg">🎓 Education</h4>
+            <p class="text-gray-300">MSS in Economics<br><span class="text-sm">National University,
+                BD</span></p>
+          </div>
+          <div class="card-3d p-6 rounded-2xl">
+            <h4 class="font-bold text-green-400 mb-3 text-lg">📍 Location</h4>
+            <p class="text-gray-300">Bogura, Bangladesh<br><span class="text-sm">🇧🇩 Available
+                Remotely</span></p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <span
+            class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 rounded-full font-semibold">Problem
+            Solver</span>
+          <span
+            class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-3 rounded-full font-semibold">Team
+            Player</span>
+          <span
+            class="bg-gradient-to-r from-green-500 to-green-600 px-6 py-3 rounded-full font-semibold">AI
+            Enthusiast</span>
+          <span
+            class="bg-gradient-to-r from-yellow-500 to-yellow-600 px-6 py-3 rounded-full font-semibold">Lifelong
+            Learner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Skills Section -->
     <section id="skills" class="py-24 bg-gradient-to-br from-gray-800 via-gray-900 to-black section-enter">
