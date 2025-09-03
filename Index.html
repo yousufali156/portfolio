@@ -1007,7 +1007,9 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 section-enter">
+    <section id="contact"
+        class="relative overflow-hidden py-24 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 section-enter">
+
         <div class="max-w-5xl mx-auto px-4 text-center">
             <h2
                 class="text-5xl md:text-6xl font-black mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -1051,6 +1053,9 @@
                 </div>
             </div>
 
+            <!-- You had an empty div here; keeping it for future content if needed -->
+            <div></div>
+
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <button onclick="window.open('mailto:mdyousufali.dev@gmail.com', '_blank')"
                     class="bg-white text-gray-900 hover:bg-gray-100 px-10 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-2xl">
@@ -1063,6 +1068,17 @@
             </div>
         </div>
     </section>
+
+    <!-- map section -->
+    <section
+        class="relative w-full h-[600px] overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+
+        <!-- Decorative map.svg background -->
+        <img src="/map.svg" alt="Decorative map" aria-hidden="true"
+            class="absolute inset-0 w-full object-cover object-center opacity-30 md:opacity-40 mix-blend-soft-light" />
+    </section>
+
+
 
     <!-- Footer -->
     <footer class="bg-black py-16 border-t border-gray-800">
@@ -1110,9 +1126,11 @@
                 <!-- Clock Section -->
                 <div class="text-white text-xl mb-8">
                     Current Time:
-                    <span id="footer-clock"
-                        class="px-4 py-2 rounded-lg font-mono text-green-400 bg-gray-900 shadow-lg"></span>
+                    <span id="footer-clock" class="px-5 py-3 rounded-lg font-mono text-2xl font-bold 
+           bg-gradient-to-r from-green-400 via-blue-400 to-purple-500 
+           text-transparent bg-clip-text animate-pulse shadow-lg"></span>
                 </div>
+
 
                 <!-- Footer Text -->
                 <div class="border-t border-gray-800 pt-8">
@@ -1128,22 +1146,31 @@
         </div>
     </footer>
 
-    <!-- Clock Script -->
+
+
     <script>
         function updateClock() {
-            const clock = document.getElementById('footer-clock');
+            const clock = document.getElementById("footer-clock");
             const now = new Date();
+
             let hours = now.getHours();
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const minutes = String(now.getMinutes()).padStart(2, "0");
+            const seconds = String(now.getSeconds()).padStart(2, "0");
+            const ampm = hours >= 12 ? "PM" : "AM";
+
             hours = hours % 12 || 12; // convert 0 to 12
-            hours = String(hours).padStart(2, '0');
-            clock.textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+            hours = String(hours).padStart(2, "0");
+
+            // Add a blinking colon effect
+            const colon = now.getSeconds() % 2 === 0 ? ":" : " ";
+
+            clock.textContent = `${hours}${colon}${minutes}${colon}${seconds} ${ampm}`;
         }
+
         setInterval(updateClock, 1000);
-        updateClock(); // initialize immediately
+        updateClock();
     </script>
+
 
 
     <script>
