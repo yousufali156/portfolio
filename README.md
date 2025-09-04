@@ -1,4 +1,6 @@
-# portfolio
+### Md. Yousuf Ali
+
+<br>
 Md. Yousuf Ali - 3D Animated Portfolio
 Welcome to the official repository for my personal portfolio website. This project is a showcase of my skills as a Full Stack MERN Developer, designed with a focus on modern aesthetics, advanced animations, and a seamless user experience. It reflects my passion for creating innovative and visually stunning web applications.
 
