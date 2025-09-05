@@ -515,7 +515,7 @@
         });
     </script>
 
-    
+
 
     <!-- Hero Section -->
     <section id="home"
@@ -900,7 +900,37 @@
     </section>
 
     <!-- Projects Section -->
+
+
+
+    <!-- Projects Section -->
     <section id="projects" class="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 section-enter">
+        <style>
+            .project-card {
+                background: linear-gradient(145deg, #111827, #0f172a);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+                transition: all 0.4s ease;
+                transform-style: preserve-3d;
+            }
+
+            .project-card:hover {
+                transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            }
+
+            .btn-3d {
+                background: linear-gradient(to right, #9333ea, #3b82f6);
+                color: white;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+                transition: all 0.3s ease;
+            }
+
+            .btn-3d:hover {
+                transform: translateY(-3px) scale(1.05);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+            }
+        </style>
+
         <div class="max-w-7xl mx-auto px-4">
             <h2
                 class="text-5xl md:text-6xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -908,6 +938,7 @@
             </h2>
 
             <div class="grid lg:grid-cols-2 gap-12">
+
                 <!-- CourseHub Project -->
                 <div class="project-card rounded-3xl p-8">
                     <div class="relative mb-8 overflow-hidden rounded-2xl">
@@ -919,9 +950,9 @@
                     </div>
                     <h3 class="text-3xl font-bold mb-4 text-blue-400">CourseHub</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed text-lg">
-                        Comprehensive Course Management Platform with secure enrollment system, Firebase Authentication,
-                        and MongoDB aggregation. Features advanced course browsing, enrollment limits, and intuitive
-                        user dashboard.
+                        Comprehensive Course Management Platform with secure enrollment system,
+                        Firebase Authentication, and MongoDB aggregation. Features advanced course
+                        browsing, enrollment limits, and intuitive user dashboard.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-8">
                         <span
@@ -936,13 +967,11 @@
                             class="bg-purple-600/20 border border-purple-500 px-4 py-2 rounded-full text-sm font-medium text-purple-300">JWT</span>
                     </div>
                     <div class="flex gap-4">
-                        <button onclick="window.open('#', '_blank')" class="btn-3d px-6 py-3 rounded-xl font-semibold">
-                            🚀 Live Demo
-                        </button>
                         <button onclick="window.open('#', '_blank')"
-                            class="border-2 border-gray-600 hover:border-blue-400 px-6 py-3 rounded-xl font-semibold transition-all">
-                            📂 GitHub
-                        </button>
+                            class="btn-3d px-6 py-3 rounded-xl font-semibold">🚀 Live Demo</button>
+                        <button onclick="window.open('#', '_blank')"
+                            class="border-2 border-gray-600 hover:border-blue-400 px-6 py-3 rounded-xl font-semibold transition-all">📂
+                            GitHub</button>
                     </div>
                 </div>
 
@@ -957,9 +986,9 @@
                     </div>
                     <h3 class="text-3xl font-bold mb-4 text-green-400">TaskMatch</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed text-lg">
-                        Fast & Easy Freelance Task Marketplace with real-time bidding system. Features secure task
-                        posting,
-                        Firebase authentication, comprehensive user dashboard, and live bid count updates.
+                        Fast & Easy Freelance Task Marketplace with real-time bidding system. Features
+                        secure task posting, Firebase authentication, comprehensive user dashboard,
+                        and live bid count updates.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-8">
                         <span
@@ -974,13 +1003,11 @@
                             class="bg-orange-600/20 border border-orange-500 px-4 py-2 rounded-full text-sm font-medium text-orange-300">Firebase</span>
                     </div>
                     <div class="flex gap-4">
-                        <button onclick="window.open('#', '_blank')" class="btn-3d px-6 py-3 rounded-xl font-semibold">
-                            🚀 Live Demo
-                        </button>
                         <button onclick="window.open('#', '_blank')"
-                            class="border-2 border-gray-600 hover:border-green-400 px-6 py-3 rounded-xl font-semibold transition-all">
-                            📂 GitHub
-                        </button>
+                            class="btn-3d px-6 py-3 rounded-xl font-semibold">🚀 Live Demo</button>
+                        <button onclick="window.open('#', '_blank')"
+                            class="border-2 border-gray-600 hover:border-green-400 px-6 py-3 rounded-xl font-semibold transition-all">📂
+                            GitHub</button>
                     </div>
                 </div>
 
@@ -995,9 +1022,9 @@
                     </div>
                     <h3 class="text-3xl font-bold mb-4 text-purple-400">PortfoGen</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed text-lg">
-                        Modern Portfolio Generator with live preview & multiple responsive themes. Features 5+ beautiful
-                        templates,
-                        light/dark mode toggle, real-time content preview, and seamless deployment options.
+                        Modern Portfolio Generator with live preview & multiple responsive themes.
+                        Features 5+ beautiful templates, light/dark mode toggle, real-time content
+                        preview, and seamless deployment options.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-8">
                         <span
@@ -1014,13 +1041,11 @@
                             class="bg-green-600/20 border border-green-500 px-4 py-2 rounded-full text-sm font-medium text-green-300">Netlify</span>
                     </div>
                     <div class="flex gap-4">
-                        <button onclick="window.open('#', '_blank')" class="btn-3d px-6 py-3 rounded-xl font-semibold">
-                            🚀 Live Demo
-                        </button>
                         <button onclick="window.open('#', '_blank')"
-                            class="border-2 border-gray-600 hover:border-purple-400 px-6 py-3 rounded-xl font-semibold transition-all">
-                            📂 GitHub
-                        </button>
+                            class="btn-3d px-6 py-3 rounded-xl font-semibold">🚀 Live Demo</button>
+                        <button onclick="window.open('#', '_blank')"
+                            class="border-2 border-gray-600 hover:border-purple-400 px-6 py-3 rounded-xl font-semibold transition-all">📂
+                            GitHub</button>
                     </div>
                 </div>
 
@@ -1035,9 +1060,9 @@
                     </div>
                     <h3 class="text-3xl font-bold mb-4 text-indigo-400">DevTalks</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed text-lg">
-                        Feature-rich MERN Stack forum platform for meaningful real-time conversations. Includes secure
-                        authentication,
-                        role-based memberships, Stripe payment integration, and powerful admin dashboard.
+                        Feature-rich MERN Stack forum platform for meaningful real-time conversations.
+                        Includes secure authentication, role-based memberships, Stripe payment
+                        integration, and powerful admin dashboard.
                     </p>
                     <div class="flex flex-wrap gap-3 mb-8">
                         <span
@@ -1052,18 +1077,20 @@
                             Panel</span>
                     </div>
                     <div class="flex gap-4">
-                        <button onclick="window.open('#', '_blank')" class="btn-3d px-6 py-3 rounded-xl font-semibold">
-                            🚀 Live Demo
-                        </button>
                         <button onclick="window.open('#', '_blank')"
-                            class="border-2 border-gray-600 hover:border-indigo-400 px-6 py-3 rounded-xl font-semibold transition-all">
-                            📂 GitHub
-                        </button>
+                            class="btn-3d px-6 py-3 rounded-xl font-semibold">🚀 Live Demo</button>
+                        <button onclick="window.open('#', '_blank')"
+                            class="border-2 border-gray-600 hover:border-indigo-400 px-6 py-3 rounded-xl font-semibold transition-all">📂
+                            GitHub</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
 
     <!-- Contact Section -->
     <section id="contact"
