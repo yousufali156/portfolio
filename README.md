@@ -132,7 +132,13 @@ Let’s build something great together!
 
 🔗 Click Here to Download Resume
 
+
+
+
 🏁 Conclusion
 
 This portfolio is crafted with care, creativity & attention to detail.
 If you're a recruiter, client, or collaborator — I’d love to hear from you.
+Let’s connect and create impactful digital products!
+
+✨ Crafted with ❤️ by Md. Yousuf Ali from Bogura, Bangladesh 🇧🇩
